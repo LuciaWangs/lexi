@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<p align="center">
+    <input type="button" value="全选" id="quanxuan">
+    <input type="button" value="反选" id="fanxuan">
+    <input type="button" value="取消" id="quxiao">
+</p>
+
+<table border="1" cellpadding="2" cellspacing="0" rules="all" align="center" width="500">
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>1111111111111111112112</td>
+    </tr>
+</table>
+
+
+<script>
+    //点击全选的时候，让所有的checkbox选中
+    document.getElementById('quanxuan').onclick = function(){
+        var inputs = document.querySelectorAll('table input');
+        for(var i=0; i<inputs.length; i++){
+            inputs[i].checked = true;
+        }
+    };
+    //点击取消的时候，让所有的checkbox不选中
+    document.getElementById('quxiao').onclick = function(){
+        var inputs = document.querySelectorAll('table input');
+        for(var i=0; i<inputs.length; i++){
+            inputs[i].checked = false;
+        }
+    };
+    //点击反选的时候，让选中的不选，让没选中的选中
+    document.getElementById('fanxuan').onclick = function(){
+        var inputs = document.querySelectorAll('table input');
+        for(var i=0; i<inputs.length; i++){
+            inputs[i].checked = !inputs[i].checked;
+        }
+    };
+</script>
+
+
+</body>
+</html>

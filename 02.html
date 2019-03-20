@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{}
+        .c{}
+        #a{}
+        #a .c{}
+        div,li{}
+    </style>
+</head>
+<body>
+
+
+<div id="a">
+    <div>hello</div>
+    <div class="c">world</div>
+</div>
+
+<ul id="b">
+    <li>刘备</li>
+    <li class="c">关羽</li>
+    <li class="c">张飞</li>
+</ul>
+
+<input type="radio" name="sex" value="男" checked> 男
+<input type="radio" name="sex" value="女"> 女
+
+<script>
+    // 所有的查找方法，参数都是字符串形式
+    /************** getElementById() *************/
+    var x1 = document.getElementById('a'); //直接填id的值，不要按照css选择器的方式写 #a
+    console.log(x1);
+
+    var a = document.getElementById
+    /************ getElementsByTagName() **************/
+    var lis = document.getElementsByTagName('li');
+    console.log(lis);
+    
+
+    /************ getElementsByClassName() **************/
+    var classC = document.getElementsByClassName('c');
+    console.log(classC);
+
+    /************ getElementsByName() **************/
+    var sex = document.getElementsByName('sex');
+    console.log(sex);
+
+    /*************** querySelector() ***************/
+    var cs1 = document.querySelector('.c');
+    console.log(cs1);
+
+    /*************** querySelectorAll() ***************/
+    var cs2 = document.querySelectorAll('.c');
+    console.log(cs2);
+</script>
+
+</body>
+</html>
